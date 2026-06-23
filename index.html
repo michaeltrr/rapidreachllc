@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rapid Reach LLC</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --dark: #080b14;
+      --dark2: #0f1524;
+      --card: #111827;
+      --border: rgba(255,255,255,0.08);
+      --grad: linear-gradient(135deg, #6366f1, #8b5cf6, #06b6d4);
+      --grad2: linear-gradient(135deg, #6366f1 0%, #06b6d4 100%);
+      --text: #f1f5f9;
+      --muted: #94a3b8;
+      --accent: #6366f1;
+      --accent2: #06b6d4;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--dark);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 64px;
+      background: rgba(8,11,20,0.85);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      z-index: 100;
+    }
+    .logo {
+      font-size: 18px;
+      font-weight: 800;
+      background: var(--grad);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .nav-links a {
+      margin-left: 36px;
+      text-decoration: none;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--text); }
+    .nav-cta {
+      margin-left: 36px !important;
+      background: var(--grad) !important;
+      -webkit-background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+      background-clip: text !important;
+      font-weight: 700 !important;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 140px 64px 100px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -200px; right: -200px;
+      width: 700px; height: 700px;
+      background: radial-gradient(circle, rgba(99,102,241,0.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -100px; left: -100px;
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(6,182,212,0.1) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-content { max-width: 760px; position: relative; z-index: 1; }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(99,102,241,0.1);
+      border: 1px solid rgba(99,102,241,0.3);
+      padding: 8px 16px;
+      border-radius: 100px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #a5b4fc;
+      margin-bottom: 32px;
+    }
+    .hero-badge span { width: 6px; height: 6px; background: #6366f1; border-radius: 50%; display: inline-block; }
+    .hero h1 {
+      font-size: 72px;
+      font-weight: 900;
+      line-height: 1.0;
+      letter-spacing: -2px;
+      margin-bottom: 28px;
+    }
+    .hero h1 .grad {
+      background: var(--grad);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero p {
+      font-size: 20px;
+      color: var(--muted);
+      line-height: 1.7;
+      max-width: 540px;
+      margin-bottom: 48px;
+      font-weight: 400;
+    }
+    .hero-btns { display: flex; gap: 16px; flex-wrap: wrap; }
+    .btn-primary {
+      display: inline-block;
+      padding: 16px 36px;
+      background: var(--grad);
+      color: #fff;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 700;
+      border-radius: 8px;
+      letter-spacing: 0.3px;
+      transition: opacity 0.2s, transform 0.2s;
+      border: none;
+      cursor: pointer;
+    }
+    .btn-primary:hover { opacity: 0.9; transform: translateY(-1px); }
+    .btn-secondary {
+      display: inline-block;
+      padding: 16px 36px;
+      background: transparent;
+      color: var(--text);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      transition: border-color 0.2s, transform 0.2s;
+      cursor: pointer;
+    }
+    .btn-secondary:hover { border-color: rgba(255,255,255,0.25); transform: translateY(-1px); }
+
+    /* STATS BAR */
+    .stats-bar {
+      background: var(--dark2);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 40px 64px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .stat-item { text-align: center; }
+    .stat-item:not(:last-child) { border-right: 1px solid var(--border); }
+    .stat-num {
+      font-size: 42px;
+      font-weight: 900;
+      letter-spacing: -1px;
+      background: var(--grad);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .stat-desc { font-size: 13px; color: var(--muted); margin-top: 4px; font-weight: 500; }
+
+    /* SECTION */
+    section { padding: 100px 64px; }
+    .section-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      background: var(--grad2);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 16px;
+    }
+    .section-title {
+      font-size: 46px;
+      font-weight: 900;
+      letter-spacing: -1px;
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+    .section-sub {
+      font-size: 18px;
+      color: var(--muted);
+      max-width: 520px;
+      line-height: 1.7;
+      margin-bottom: 64px;
+    }
+
+    /* SERVICES */
+    #services { background: var(--dark2); }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .service-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 40px 36px;
+      transition: border-color 0.3s, transform 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: var(--grad);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .service-card:hover { border-color: rgba(99,102,241,0.3); transform: translateY(-4px); }
+    .service-card:hover::before { opacity: 1; }
+    .service-icon {
+      width: 48px; height: 48px;
+      border-radius: 12px;
+      background: rgba(99,102,241,0.15);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 22px;
+      margin-bottom: 24px;
+    }
+    .service-card h3 { font-size: 20px; font-weight: 700; margin-bottom: 12px; }
+    .service-card p { font-size: 15px; color: var(--muted); line-height: 1.7; }
+
+    /* ABOUT */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .about-text p {
+      font-size: 17px;
+      color: var(--muted);
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+    .about-visual {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 48px;
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+    .about-stat { display: flex; flex-direction: column; gap: 6px; }
+    .about-stat-num {
+      font-size: 44px;
+      font-weight: 900;
+      letter-spacing: -1px;
+      background: var(--grad);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .about-stat-label { font-size: 14px; color: var(--muted); }
+    .about-stat:not(:last-child) { padding-bottom: 32px; border-bottom: 1px solid var(--border); }
+
+    /* APPOINTMENTS */
+    #appointments {
+      background: var(--dark2);
+    }
+    .appt-inner {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 64px;
+      max-width: 700px;
+      position: relative;
+      overflow: hidden;
+    }
+    .appt-inner::before {
+      content: '';
+      position: absolute;
+      top: -100px; right: -100px;
+      width: 300px; height: 300px;
+      background: radial-gradient(circle, rgba(99,102,241,0.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .appt-inner p {
+      font-size: 17px;
+      color: var(--muted);
+      line-height: 1.7;
+      margin-bottom: 36px;
+    }
+
+    /* CONTACT */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+    }
+    .contact-info p { font-size: 16px; color: var(--muted); line-height: 1.8; margin-bottom: 12px; }
+    .contact-info a { color: #a5b4fc; text-decoration: none; font-weight: 600; }
+    form { display: flex; flex-direction: column; gap: 16px; }
+    input, textarea {
+      padding: 14px 18px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      font-size: 15px;
+      font-family: 'Inter', sans-serif;
+      background: var(--card);
+      color: var(--text);
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    input::placeholder, textarea::placeholder { color: var(--muted); }
+    input:focus, textarea:focus { border-color: rgba(99,102,241,0.5); }
+    textarea { height: 140px; resize: vertical; }
+
+    /* FOOTER */
+    footer {
+      padding: 40px 64px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      color: var(--muted);
+    }
+    footer a { color: var(--muted); text-decoration: none; }
+    footer a:hover { color: var(--text); }
+
+    @media (max-width: 768px) {
+      nav { padding: 16px 24px; }
+      .nav-links { display: none; }
+      .hero { padding: 100px 24px 60px; }
+      .hero h1 { font-size: 42px; }
+      section { padding: 60px 24px; }
+      .stats-bar { grid-template-columns: 1fr; gap: 32px; padding: 40px 24px; }
+      .stat-item:not(:last-child) { border-right: none; border-bottom: 1px solid var(--border); padding-bottom: 32px; }
+      .services-grid { grid-template-columns: 1fr; }
+      .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+      .appt-inner { padding: 36px 24px; }
+      footer { flex-direction: column; gap: 12px; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="logo">Rapid Reach</div>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#appointments">Book a Call</a>
+      <a href="#contact">Contact</a>
+      <a href="#appointments" class="nav-cta">Get Started →</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-badge"><span></span> Real Estate Sales Outsourcing</div>
+      <h1>Sales Support That <span class="grad">Converts.</span></h1>
+      <p>Rapid Reach delivers dedicated inside sales agents and lead qualification services built for US real estate professionals. More calls. More conversions. Less overhead.</p>
+      <div class="hero-btns">
+        <a href="#appointments" class="btn-primary">Book a Discovery Call</a>
+        <a href="#services" class="btn-secondary">See Our Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS BAR -->
+  <div class="stats-bar">
+    <div class="stat-item">
+      <div class="stat-num">100%</div>
+      <div class="stat-desc">Dedicated to real estate sales support</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">US-Run</div>
+      <div class="stat-desc">Managed and operated from the United States</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">24/7</div>
+      <div class="stat-desc">Coverage availability for your pipeline</div>
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="section-label">What We Do</div>
+    <div class="section-title">Built for Real Estate Teams</div>
+    <p class="section-sub">We handle the calls so your agents can focus on closing.</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">📞</div>
+        <h3>Inside Sales (ISA)</h3>
+        <p>Dedicated agents who call, qualify, and nurture leads on your behalf — keeping your pipeline full and your closers busy.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🎯</div>
+        <h3>Lead Qualification</h3>
+        <p>We filter cold leads and identify serious buyers and sellers so your team only spends time on high-intent prospects.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🔄</div>
+        <h3>Follow-Up Campaigns</h3>
+        <p>Consistent outreach keeps your leads warm. We handle the follow-up calls so no opportunity falls through the cracks.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="about-grid">
+      <div class="about-text">
+        <div class="section-label">About Us</div>
+        <div class="section-title">Focused on Results, Not Just Calls</div>
+        <p>Rapid Reach LLC is a business process outsourcing company built specifically to support US real estate operations. We provide dedicated sales agents who are trained, managed, and ready to perform from day one.</p>
+        <p>Our team operates with the discipline of a high-performance sales floor — focused on conversion, accountability, and consistent communication with your team.</p>
+      </div>
+      <div class="about-visual">
+        <div class="about-stat">
+          <div class="about-stat-num">100%</div>
+          <div class="about-stat-label">Real estate focused — not a general call center</div>
+        </div>
+        <div class="about-stat">
+          <div class="about-stat-num">US-Run</div>
+          <div class="about-stat-label">Management, standards, and oversight from the USA</div>
+        </div>
+        <div class="about-stat">
+          <div class="about-stat-num">24/7</div>
+          <div class="about-stat-label">Flexible coverage to fit your market's schedule</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- APPOINTMENTS -->
+  <section id="appointments">
+    <div class="appt-inner">
+      <div class="section-label">Book a Call</div>
+      <div class="section-title">Let's Talk About Your Pipeline</div>
+      <p>Schedule a free 20-minute discovery call with our team. We'll learn about your business, walk you through our process, and see if we're the right fit.</p>
+      <a href="mailto:michaelt@rapidreachllc.biz?subject=Discovery Call Request" class="btn-primary">Schedule via Email</a>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="section-label">Contact</div>
+        <div class="section-title">Get in Touch</div>
+        <p>Have questions or ready to get started? Reach out directly and we'll get back to you within one business day.</p>
+        <p>Email: <a href="mailto:michaelt@rapidreachllc.biz">michaelt@rapidreachllc.biz</a></p>
+        <p>Based in Utah, USA</p>
+      </div>
+      <div>
+        <form action="mailto:michaelt@rapidreachllc.biz" method="post" enctype="text/plain">
+          <input type="text" name="Name" placeholder="Your Name" required />
+          <input type="email" name="Email" placeholder="Your Email" required />
+          <input type="text" name="Company" placeholder="Company / Team Name" />
+          <textarea name="Message" placeholder="Tell us about your business and what you need..."></textarea>
+          <button type="submit" class="btn-primary">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div>© 2026 Rapid Reach LLC. All rights reserved.</div>
+    <div><a href="mailto:michaelt@rapidreachllc.biz">michaelt@rapidreachllc.biz</a></div>
+  </footer>
+
+</body>
+</html>
