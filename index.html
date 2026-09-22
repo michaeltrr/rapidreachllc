@@ -16,6 +16,7 @@
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
 <header class="site-header">
   <nav class="container nav" aria-label="Primary">
@@ -98,7 +99,7 @@
   <!-- SERVICES TEASER + PIPELINE MOCKUP -->
   <section class="teaser" id="services">
     <div class="container">
-      <div class="teaser-panel">
+      <div class="teaser-panel" data-reveal-scroll="left">
         <div>
           <p class="kicker">Services</p>
           <h2>Streamline your sales process.</h2>
@@ -115,7 +116,7 @@
         <p class="teaser-desc">We manage the initial calling and qualifying phases, allowing your real estate agents to focus strictly on closing deals.</p>
       </div>
 
-      <div class="teaser-mockup">
+      <div class="teaser-mockup" data-reveal-scroll="right">
         <div class="pipeline-card">
           <div class="pipeline-card-head">
             <span>Today's queue</span>
@@ -158,13 +159,13 @@
   <!-- BENEFITS -->
   <section class="section" id="benefits">
     <div class="container">
-      <div class="section-head centered">
+      <div class="section-head centered" data-reveal-scroll>
         <p class="kicker">Benefits</p>
         <h2 class="section-title">Focus on what you do best.</h2>
         <p class="section-sub">We provide dedicated support to boost your real estate sales efficiency.</p>
       </div>
 
-      <div class="benefit-card">
+      <div class="benefit-card" data-reveal-scroll data-reveal-group="benefits">
         <div class="benefit-thumb">
           <img class="visual-photo" src="images/service-01-isa.jpg" alt="Sales agent on a call wearing a headset" />
           <span class="plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
@@ -173,7 +174,7 @@
         <p>Get a fully managed sales professional who cold calls, follows up, and nurtures prospects so your team can focus exclusively on selling.</p>
       </div>
 
-      <div class="benefit-card">
+      <div class="benefit-card" data-reveal-scroll data-reveal-group="benefits">
         <div class="benefit-thumb">
           <img class="visual-photo" src="images/benefit-lead-qualification.jpg" alt="Team of agents on headsets working at their desks" />
           <span class="plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
@@ -182,7 +183,7 @@
         <p>We filter the noise out of your pipeline. Your agents only spend time talking to high-intent buyers and sellers who are ready to transact.</p>
       </div>
 
-      <div class="benefit-card">
+      <div class="benefit-card" data-reveal-scroll data-reveal-group="benefits">
         <div class="benefit-thumb">
           <img class="visual-photo" src="images/service-03-followup.jpg" alt="Businessperson marking follow-up dates on a calendar" />
           <span class="plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
@@ -196,7 +197,7 @@
   <!-- ABOUT OUR SERVICES (deep-dive, alternating) -->
   <section class="section" id="approach">
     <div class="container">
-      <div class="approach-head">
+      <div class="approach-head" data-reveal-scroll>
         <div>
           <p class="kicker">About our services</p>
           <h2 class="section-title">Our Approach</h2>
@@ -206,7 +207,7 @@
 
       <div class="deepdive-list">
         <div class="deepdive-row">
-          <div class="deepdive-copy">
+          <div class="deepdive-copy" data-reveal-scroll="left">
             <p class="deepdive-eyebrow">Service 01</p>
             <h3>A fully managed sales professional on every call.</h3>
             <p>Your dedicated ISA cold calls, follows up, and nurtures prospects on your behalf — trained on your scripts and market, so your team can focus exclusively on selling.</p>
@@ -215,14 +216,14 @@
               <span class="arrow-circle" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
             </a>
           </div>
-          <div class="deepdive-visual" aria-hidden="true">
+          <div class="deepdive-visual" data-reveal-scroll="scale" aria-hidden="true">
             <img class="visual-photo" src="images/deepdive-service-01.jpg" alt="" />
             <span class="deepdive-num">01</span>
           </div>
         </div>
 
         <div class="deepdive-row reverse">
-          <div class="deepdive-copy">
+          <div class="deepdive-copy" data-reveal-scroll="right">
             <p class="deepdive-eyebrow">Service 02</p>
             <h3>Filter the noise out of your pipeline.</h3>
             <p>We qualify every lead against your criteria before it reaches your calendar, so your agents only spend time with high-intent buyers and sellers who are ready to transact.</p>
@@ -231,14 +232,14 @@
               <span class="arrow-circle" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
             </a>
           </div>
-          <div class="deepdive-visual" aria-hidden="true">
+          <div class="deepdive-visual" data-reveal-scroll="scale" aria-hidden="true">
             <img class="visual-photo" src="images/deepdive-service-02.jpg" alt="" />
             <span class="deepdive-num">02</span>
           </div>
         </div>
 
         <div class="deepdive-row">
-          <div class="deepdive-copy">
+          <div class="deepdive-copy" data-reveal-scroll="left">
             <p class="deepdive-eyebrow">Service 03</p>
             <h3>Most deals are lost in the follow-up.</h3>
             <p>We execute consistent, long-term outreach campaigns that keep leads warm between touches, so no opportunity ever falls through the cracks.</p>
@@ -247,7 +248,7 @@
               <span class="arrow-circle" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
             </a>
           </div>
-          <div class="deepdive-visual cadence-visual" aria-hidden="true">
+          <div class="deepdive-visual cadence-visual" data-reveal-scroll="scale" aria-hidden="true">
             <div class="cadence-card cadence-card--chart-only">
               <div class="cadence-chart" role="img" aria-label="Reply likelihood increases with each follow-up touch: touch one 18 percent, touch two 31 percent, touch three 52 percent, touch four or more 74 percent">
                 <div class="chart-head">
@@ -289,35 +290,35 @@
   <!-- SOLUTIONS -->
   <section class="section" id="solutions">
     <div class="container solutions-grid">
-      <div class="solutions-sticky">
+      <div class="solutions-sticky" data-reveal-scroll>
         <p class="kicker">Solutions</p>
         <h2 class="section-title">Tailored to how your team sells</h2>
         <p class="section-sub">We provide targeted solutions to enhance your real estate sales pipeline.</p>
       </div>
 
       <div class="solutions-cards">
-        <div class="solutions-card">
+        <div class="solutions-card" data-reveal-scroll data-reveal-group="solutions">
           <div class="solutions-card-visual" aria-hidden="true">
             <img class="visual-photo" src="images/solutions-independent-agents.jpg" alt="" />
           </div>
           <h3>Independent Agents</h3>
           <p>One dedicated ISA works your leads like an extension of you — same scripts, same standards, without adding headcount.</p>
         </div>
-        <div class="solutions-card">
+        <div class="solutions-card" data-reveal-scroll data-reveal-group="solutions">
           <div class="solutions-card-visual" aria-hidden="true">
             <img class="visual-photo" src="images/solutions-team-leads.jpg" alt="" />
           </div>
           <h3>Team Leads</h3>
           <p>Leads get routed and qualified centrally, then handed to the right agent — with reporting your whole team can see.</p>
         </div>
-        <div class="solutions-card">
+        <div class="solutions-card" data-reveal-scroll data-reveal-group="solutions">
           <div class="solutions-card-visual" aria-hidden="true">
             <img class="visual-photo" src="images/solutions-brokerages.jpg" alt="" />
           </div>
           <h3>Brokerages</h3>
           <p>A scalable outsourced sales floor that boosts productivity across every team under your brokerage.</p>
         </div>
-        <div class="solutions-card">
+        <div class="solutions-card" data-reveal-scroll data-reveal-group="solutions">
           <div class="solutions-card-visual" aria-hidden="true">
             <img class="visual-photo" src="images/solutions-growing-teams.jpg" alt="" />
           </div>
@@ -331,29 +332,29 @@
   <!-- PROCESS -->
   <section class="section" id="process">
     <div class="container">
-      <div class="section-head">
+      <div class="section-head" data-reveal-scroll>
         <p class="kicker">How it works</p>
         <h2 class="section-title">From first call to your first report</h2>
         <p class="section-sub">A straightforward onboarding, built around how your team already works.</p>
       </div>
 
       <div class="process-list">
-        <div class="process-step">
+        <div class="process-step" data-reveal-scroll data-reveal-group="process">
           <div class="process-num tabular">01</div>
           <h3>Discovery call</h3>
           <p>We learn your market, your current lead sources, and where calls are falling through today.</p>
         </div>
-        <div class="process-step">
+        <div class="process-step" data-reveal-scroll data-reveal-group="process">
           <div class="process-num tabular">02</div>
           <h3>Onboarding &amp; scripts</h3>
           <p>We set up call scripts, CRM access, and a reporting cadence around your existing workflow.</p>
         </div>
-        <div class="process-step">
+        <div class="process-step" data-reveal-scroll data-reveal-group="process">
           <div class="process-num tabular">03</div>
           <h3>Agents start calling</h3>
           <p>Your dedicated ISA begins working leads on the schedule you set.</p>
         </div>
-        <div class="process-step">
+        <div class="process-step" data-reveal-scroll data-reveal-group="process">
           <div class="process-num tabular">04</div>
           <h3>Weekly reporting</h3>
           <p>You get a standing report on calls made, leads qualified, and appointments booked.</p>
@@ -365,21 +366,21 @@
   <!-- DIFFERENTIATORS -->
   <section class="section" id="differentiators">
     <div class="container impact-grid">
-      <div class="impact-sticky">
+      <div class="impact-sticky" data-reveal-scroll>
         <p class="kicker">The differentiators</p>
         <h2>Not a generic call center.</h2>
       </div>
 
       <div class="impact-cards">
-        <div class="impact-card pop">
+        <div class="impact-card pop" data-reveal-scroll data-reveal-group="impact">
           <div class="impact-value tabular" data-count-to="100" data-suffix="%">0%</div>
           <p class="impact-label"><strong>Real Estate Exclusive.</strong> Our agents and infrastructure are built specifically for the real estate industry — not a generic call center.</p>
         </div>
-        <div class="impact-card">
+        <div class="impact-card" data-reveal-scroll data-reveal-group="impact">
           <div class="impact-value">US-Run</div>
           <p class="impact-label"><strong>US-Run Operations.</strong> Strict quality control, accountability, and management based entirely in the United States.</p>
         </div>
-        <div class="impact-card">
+        <div class="impact-card" data-reveal-scroll data-reveal-group="impact">
           <div class="impact-value tabular" data-count-to="24" data-suffix="/7">0</div>
           <p class="impact-label"><strong>Pipeline Coverage.</strong> Real estate doesn't stop at 5 PM. We engage your leads around the clock so you never miss an after-hours opportunity.</p>
         </div>
@@ -390,7 +391,7 @@
   <!-- ABOUT -->
   <section class="section" id="about">
     <div class="container about-grid">
-      <div>
+      <div data-reveal-scroll="left">
         <p class="kicker">About us</p>
         <h2 class="section-title">Focused on results, not just calls</h2>
         <div class="about-copy" style="margin-top: 22px;">
@@ -399,7 +400,7 @@
         </div>
       </div>
 
-      <div class="about-note">
+      <div class="about-note" data-reveal-scroll="right">
         <h3>Who's behind it</h3>
         <p>Rapid Reach is managed and operated from the United States, based in Utah. Every account is overseen directly by our team — no anonymous account managers, no black-box reporting.</p>
         <p>Questions before booking a call? Reach out directly at <a class="accent-link" href="mailto:michaelt@rapidreachllc.biz">michaelt@rapidreachllc.biz</a>.</p>
@@ -410,29 +411,29 @@
   <!-- FAQ -->
   <section class="section" id="faq">
     <div class="container">
-      <div class="section-head">
+      <div class="section-head" data-reveal-scroll>
         <p class="kicker">Questions</p>
         <h2 class="section-title">Before you book a call</h2>
       </div>
 
       <div class="faq-list">
-        <div class="faq-item">
+        <div class="faq-item" data-reveal-scroll data-reveal-group="faq">
           <div class="faq-q">How fast can agents start calling my leads?</div>
           <div class="faq-a">Most teams are live within one to two weeks of the discovery call, once scripts and CRM access are in place.</div>
         </div>
-        <div class="faq-item">
+        <div class="faq-item" data-reveal-scroll data-reveal-group="faq">
           <div class="faq-q">Where is Rapid Reach based?</div>
           <div class="faq-a">Rapid Reach is managed and operated from the United States, with oversight and quality standards set from our team in Utah.</div>
         </div>
-        <div class="faq-item">
+        <div class="faq-item" data-reveal-scroll data-reveal-group="faq">
           <div class="faq-q">Will this work with our current CRM?</div>
           <div class="faq-a">We work inside the tools your team already uses for lead routing and follow-up notes — tell us your setup on the discovery call and we'll confirm fit before you commit to anything.</div>
         </div>
-        <div class="faq-item">
+        <div class="faq-item" data-reveal-scroll data-reveal-group="faq">
           <div class="faq-q">What does it cost?</div>
           <div class="faq-a">Pricing depends on call volume and coverage hours. We'll walk through options directly on your discovery call rather than quote blind.</div>
         </div>
-        <div class="faq-item">
+        <div class="faq-item" data-reveal-scroll data-reveal-group="faq">
           <div class="faq-q">How do you keep call quality consistent?</div>
           <div class="faq-a">Every call is logged against the script and standards set during onboarding, with a weekly report back to your team so nothing is a surprise.</div>
         </div>
@@ -442,7 +443,7 @@
 
   <!-- FINAL CTA -->
   <section class="section cta-band" id="book">
-    <div class="container cta-inner">
+    <div class="container cta-inner" data-reveal-scroll>
       <h2>Scale with Rapid Reach.<br>Start today.</h2>
       <div class="cta-actions">
         <a class="btn btn-primary btn-arrow" href="mailto:michaelt@rapidreachllc.biz?subject=Discovery%20call%20request&body=Hi%20Michael%2C%0D%0A%0D%0AI'd%20like%20to%20schedule%20a%20discovery%20call.%20A%20good%20time%20for%20me%20is%3A%0D%0A%0D%0ATeam%2Fmarket%3A%0D%0A">
@@ -457,7 +458,7 @@
   <!-- CONTACT -->
   <section class="section" id="contact">
     <div class="container contact-grid">
-      <div class="contact-info">
+      <div class="contact-info" data-reveal-scroll="left">
         <p class="kicker">Contact</p>
         <h2 class="section-title">Get in touch</h2>
         <p class="section-sub">Have questions or ready to get started? We reply within one business day.</p>
@@ -469,7 +470,7 @@
         </dl>
       </div>
 
-      <form class="contact-form" action="mailto:michaelt@rapidreachllc.biz" method="post" enctype="text/plain">
+      <form class="contact-form" data-reveal-scroll="right" action="mailto:michaelt@rapidreachllc.biz" method="post" enctype="text/plain">
         <div class="field">
           <label for="name">Name</label>
           <input id="name" name="Name" type="text" required autocomplete="name" />

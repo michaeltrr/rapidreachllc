@@ -70,4 +70,90 @@
     );
     counters.forEach(function (el) { countObserver.observe(el); });
   }
+
+  // Scroll-triggered reveals — every major section fades/slides into view
+  // as the visitor scrolls down the page (mirrors the hero's load-in, but
+  // driven by IntersectionObserver instead of a fixed timeout).
+  var scrollRevealEls = document.querySelectorAll("[data-reveal-scroll]");
+
+  // Stagger siblings that share a data-reveal-group (card grids, FAQ rows).
+  var revealGroups = {};
+  scrollRevealEls.forEach(function (el) {
+    var group = el.getAttribute("data-reveal-group");
+    if (!group) return;
+    (revealGroups[group] = revealGroups[group] || []).push(el);
+  });
+  Object.keys(revealGroups).forEach(function (group) {
+    revealGroups[group].forEach(function (el, i) {
+      el.style.setProperty("--reveal-delay", Math.min(i, 5) * 90 + "ms");
+    });
+  });
+
+  if (reduceMotion) {
+    scrollRevealEls.forEach(function (el) { el.classList.add("is-in"); });
+  } else if (scrollRevealEls.length) {
+    var srObserver = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-in");
+            srObserver.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12, rootMargin: "0px 0px -8% 0px" }
+    );
+    scrollRevealEls.forEach(function (el) { srObserver.observe(el); });
+  }
+
+  // Scroll progress bar — thin gold line under the header that fills as
+  // the visitor scrolls through the page.
+  var progressEl = document.getElementById("scrollProgress");
+  if (progressEl) {
+    var progressTicking = false;
+    var updateProgress = function () {
+      var doc = document.documentElement;
+      var scrollTop = doc.scrollTop || document.body.scrollTop;
+      var scrollHeight = (doc.scrollHeight || document.body.scrollHeight) - doc.clientHeight;
+      var pct = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+      progressEl.style.width = pct + "%";
+      progressTicking = false;
+    };
+    window.addEventListener(
+      "scroll",
+      function () {
+        if (!progressTicking) {
+          requestAnimationFrame(updateProgress);
+          progressTicking = true;
+        }
+      },
+      { passive: true }
+    );
+    updateProgress();
+  }
+
+  // Subtle hero parallax — the ring drifts slightly as you scroll past it.
+  var heroRingWrap = document.querySelector(".hero-ring-wrap");
+  var heroSection = document.querySelector(".hero");
+  if (heroRingWrap && heroSection && !reduceMotion) {
+    var parallaxTicking = false;
+    var updateParallax = function () {
+      var rect = heroSection.getBoundingClientRect();
+      if (rect.bottom > 0 && rect.top < window.innerHeight) {
+        var offset = Math.min(window.scrollY * 0.12, 80);
+        heroRingWrap.style.transform = "translateY(" + offset + "px)";
+      }
+      parallaxTicking = false;
+    };
+    window.addEventListener(
+      "scroll",
+      function () {
+        if (!parallaxTicking) {
+          requestAnimationFrame(updateParallax);
+          parallaxTicking = true;
+        }
+      },
+      { passive: true }
+    );
+  }
 })();
