@@ -747,6 +747,7 @@ h2.section-title {
   background: rgba(20, 20, 20, 0.72);
   backdrop-filter: blur(6px);
   display: flex;
+  will-change: transform;
 }
 .cadence-card--chart-only { align-items: stretch; }
 .cadence-chart { display: flex; flex-direction: column; width: 100%; }
