@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Terms of Service — Rapid Reach</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body class="legal-page">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <nav class="container nav" aria-label="Primary">
+    <a class="brand" href="index.html">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><text x="12" y="13" text-anchor="middle" dominant-baseline="middle" font-family="var(--font-display), sans-serif" font-weight="700" font-size="12" letter-spacing="-0.5" fill="currentColor">RR</text></svg>
+      </span>
+      Rapid Reach
+    </a>
+    <a class="btn btn-secondary" href="index.html">Back to site</a>
+  </nav>
+</header>
+
+<main class="container" id="main">
+  <h1>Terms of Service</h1>
+  <p>Last updated: <span id="updated"></span></p>
+
+  <h2>Using this website</h2>
+  <p>This website describes the sales outsourcing services offered by Rapid Reach LLC. Nothing on it is a binding offer — service terms, pricing, and scope are agreed separately with each client in writing.</p>
+
+  <h2>Services</h2>
+  <p>Rapid Reach provides inside sales agent support, lead qualification, and follow-up calling services to real estate businesses. The specifics of any engagement — coverage hours, reporting, and cost — are set out in a separate agreement with the client, not on this website.</p>
+
+  <h2>No guarantee of results</h2>
+  <p>We work to convert and qualify leads effectively, but we do not guarantee a specific number of appointments, conversions, or sales outcomes, since these depend on factors outside our control, including lead quality and market conditions.</p>
+
+  <h2>Changes</h2>
+  <p>We may update these terms as the business grows. The version posted here is the current one.</p>
+
+  <h2>Contact</h2>
+  <p>Questions about these terms can be sent to <a href="mailto:michaelt@rapidreachllc.biz">michaelt@rapidreachllc.biz</a>.</p>
+
+  <p class="fine-print">This is a general-purpose placeholder for a small service business and is not a substitute for legal advice. Have your actual service agreement and these terms reviewed by counsel before relying on them.</p>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-row">
+    <span class="footer-meta">© <span id="year"></span> Rapid Reach LLC. All rights reserved.</span>
+  </div>
+</footer>
+<script src="script.js"></script>
+<script>document.getElementById("updated").textContent = new Date().toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });</script>
+</body>
+</html>
