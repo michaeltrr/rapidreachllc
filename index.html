@@ -1,530 +1,420 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Rapid Reach — Outsourced sales floor for real estate</title>
-<meta name="description" content="Rapid Reach provides dedicated, US-managed inside sales agents for real estate teams — calling, qualifying, and booking appointments so agents focus on closing." />
-<meta property="og:title" content="Rapid Reach — Outsourced sales floor for real estate" />
-<meta property="og:description" content="Dedicated ISA and lead qualification support for U.S. real estate teams. More calls answered, more leads qualified, less overhead." />
-<meta property="og:type" content="website" />
-<link rel="icon" href="/favicon.ico" sizes="32x32" />
-<link rel="icon" type="image/svg+xml" href="favicon.svg" />
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
-<link rel="icon" type="image/png" sizes="192x192" href="favicon-192x192.png" />
-<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="styles.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rapid Reach LLC — Qualified Buyers &amp; Sellers, Transferred Live</title>
+  <meta name="description" content="Rapid Reach LLC builds client acquisition systems for US real estate agents, teams, and brokerages. Ads from your own account, an in-house US team, and 6-point qualified live transfers to your phone.">
+  <meta name="theme-color" content="#07070a">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Rapid Reach LLC">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="Rapid Reach LLC — Qualified Buyers &amp; Sellers, Transferred Live">
+  <meta property="og:description" content="Ads from your own account, an in-house US team, and 6-point qualified live transfers straight to your phone.">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Rapid Reach LLC — Qualified Buyers &amp; Sellers, Transferred Live">
+  <meta name="twitter:description" content="Ads from your own account, an in-house US team, and 6-point qualified live transfers straight to your phone.">
+  <!-- TODO at deploy: add <link rel="canonical">, og:url, and an absolute og:image / twitter:image (1200x630) once the live URL is known -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Rapid Reach LLC","email":"michaelt@rapidreachllc.biz","address":{"@type":"PostalAddress","addressRegion":"UT","addressCountry":"US"}}</script>
+  <link rel="icon" href="images/logo-96.png">
+  <link rel="apple-touch-icon" href="images/apple-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,SOFT,wght@0,9..144,30..100,400..700;1,9..144,30..100,400..700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,SOFT,wght@0,9..144,30..100,400..700;1,9..144,30..100,400..700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
+  <link rel="stylesheet" href="css/styles.css">
+  <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
-<a class="skip-link" href="#main">Skip to content</a>
-<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
-<header class="site-header">
-  <nav class="container nav" aria-label="Primary">
-    <a class="brand" href="#top">
-      <span class="brand-mark" aria-hidden="true">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><text x="12" y="13" text-anchor="middle" dominant-baseline="middle" font-family="var(--font-display), sans-serif" font-weight="700" font-size="12" letter-spacing="-0.5" fill="currentColor">RR</text></svg>
-      </span>
-      Rapid Reach
-    </a>
+<!-- Icon library: every icon is defined once, reused with <use> -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 5 5L20 7"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></symbol>
+  <symbol id="i-verified" viewBox="0 0 24 24"><path fill="#0095F6" d="M23.2 12l-.07.58-.18.57-.29.54-.34.5-.35.48-.32.46-.27.47-.2.49-.14.52-.1.55-.09.59-.12.6-.18.58-.26.53-.37.46-.46.37-.53.26-.58.18-.6.12-.59.09-.55.1-.52.14-.49.2-.47.27-.46.32-.48.35-.5.34-.54.29-.57.18L12 23.2l-.58-.07-.57-.18-.54-.29-.5-.34-.48-.35-.46-.32-.47-.27-.49-.2-.52-.14-.55-.1-.59-.09-.6-.12-.58-.18-.53-.26-.46-.37-.37-.46-.26-.53-.18-.58-.12-.6-.09-.59-.1-.55-.14-.52-.2-.49-.27-.47-.32-.46-.35-.48-.34-.5-.29-.54-.18-.57L.8 12l.07-.58.18-.57.29-.54.34-.5.35-.48.32-.46.27-.47.2-.49.14-.52.1-.55.09-.59.12-.6.18-.58.26-.53.37-.46.46-.37.53-.26.58-.18.6-.12.59-.09.55-.1.52-.14.49-.2.47-.27.46-.32.48-.35.5-.34.54-.29.57-.18L12 .8l.58.07.57.18.54.29.5.34.48.35.46.32.47.27.49.2.52.14.55.1.59.09.6.12.58.18.53.26.46.37.37.46.26.53.18.58.12.6.09.59.1.55.14.52.2.49.27.47.32.46.35.48.34.5.29.54.18.57z"/><path d="M7.4 12.4l3.2 3.1L16.7 9" fill="none" stroke="#fff" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</svg>
 
-    <ul class="nav-links">
-      <li><a href="#services">Services</a></li>
-      <li><a href="#benefits">Benefits</a></li>
-      <li><a href="#solutions">Solutions</a></li>
-      <li><a href="#faq">FAQ</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+<a class="skip" href="#main">Skip to content</a>
+<div class="progress" id="progress"></div>
+<div class="cursor-glow" id="cursor-glow"></div>
+<div class="ambient" aria-hidden="true"><div class="photo"></div><div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div></div>
+<div class="grain" aria-hidden="true"></div>
 
-    <div class="nav-cta">
-      <a class="btn btn-dark btn-arrow" href="#book">
-        Get Started
-        <span class="arrow-circle" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
-        </span>
-      </a>
-      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
-      </button>
+<!-- =====================  HEADER  ===================== -->
+<header class="header" id="header">
+  <div class="bar" id="bar">
+    <a href="#top" class="brand" aria-label="Rapid Reach LLC home"><img src="images/logo-96.png" alt="" width="30" height="30"><b>Rapid Reach LLC</b></a>
+    <nav class="nav" aria-label="Primary" id="nav">
+      <a href="#firm">Who We Are</a>
+      <a href="#system">How It Works</a>
+      <a href="#guarantee">Guarantee</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="bar-right">
+      <a href="#qualify" class="btn btn-gold btn-sm magnetic">See If You Qualify</a>
+      <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="drawer">Menu</button>
     </div>
-  </nav>
-  <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile">
-    <a href="#services">Services</a>
-    <a href="#benefits">Benefits</a>
-    <a href="#solutions">Solutions</a>
-    <a href="#faq">FAQ</a>
-    <a href="#contact">Contact</a>
-    <a href="#book">Get Started</a>
+  </div>
+  <nav class="drawer glass" id="drawer" aria-label="Mobile" hidden>
+    <a class="l" href="#firm">Who We Are</a>
+    <a class="l" href="#system">How It Works</a>
+    <a class="l" href="#guarantee">Guarantee</a>
+    <a class="l" href="#faq">FAQ</a>
+    <a class="btn btn-gold" href="#qualify">See If You Qualify</a>
   </nav>
 </header>
 
-<main id="main">
+<main id="main" tabindex="-1">
 
-  <!-- HERO -->
-  <section class="hero" id="top">
-    <div class="hero-ring-wrap" aria-hidden="true">
-      <div class="hero-ring-glow"></div>
-      <div class="hero-ring"></div>
-    </div>
-    <div class="container">
-      <div class="hero-content">
-        <h1 class="reveal" data-reveal>Stop chasing dead leads. Close more deals.</h1>
-        <p class="hero-sub reveal" data-reveal>
-          We provide elite, US-managed inside sales agents to scrub your database, qualify
-          prospects, and book appointments directly on your calendar.
-        </p>
-
-        <div class="hero-avatars reveal" data-reveal aria-hidden="true">
-          <span class="av"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="3.2"/><path d="M5 20c0-3.9 3.1-7 7-7s7 3.1 7 7"/></svg></span>
-          <span class="av"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="3.2"/><path d="M5 20c0-3.9 3.1-7 7-7s7 3.1 7 7"/></svg></span>
-          <span class="av"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="3.2"/><path d="M5 20c0-3.9 3.1-7 7-7s7 3.1 7 7"/></svg></span>
-        </div>
-        <p class="hero-desc reveal" data-reveal>
-          Rapid Reach functions as your outsourced sales floor, handling initial calling
-          and qualifying so agents focus on closing.
-        </p>
-
-        <div class="hero-actions reveal" data-reveal>
-          <a class="btn btn-primary btn-arrow" href="#book">
-            Get Started
-            <span class="arrow-circle" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
-            </span>
-          </a>
-          <a class="btn btn-secondary" href="#services">Learn More</a>
-        </div>
+<!-- =====================  HERO  ===================== -->
+<section class="hero" id="top">
+  <canvas id="net" aria-hidden="true"></canvas>
+  <div class="container hero-grid">
+    <div>
+      <p class="badge fade-in"><i></i>Live Transfer System — Active</p>
+      <h1>
+        <span class="line"><span>Qualified<br class="mbr"> buyers</span></span>
+        <span class="line"><span>and sellers,</span></span>
+        <span class="line"><span class="gold">transferred<br class="mbr"> live</span></span>
+        <span class="line"><span>to your phone.</span></span>
+      </h1>
+      <p class="lead fade-in" style="animation-delay:.9s">Your ads. Your account. Your clients. We call every lead in minutes, qualify them, and transfer real buyers and sellers straight to your phone.</p>
+      <div class="hero-cta fade-in" style="animation-delay:1.05s">
+        <a href="#qualify" class="btn btn-gold btn-lg magnetic">See If You Qualify <svg class="icon arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a href="#system" class="btn btn-glass btn-lg magnetic">How It Works</a>
       </div>
+      <p class="human-badge fade-in" style="animation-delay:1.2s"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>100% Human US Callers — Zero AI Bots</p>
     </div>
-  </section>
 
-  <!-- SERVICES TEASER + PIPELINE MOCKUP -->
-  <section class="teaser" id="services">
-    <div class="container">
-      <div class="teaser-panel" data-reveal-scroll="left">
-        <div>
-          <p class="kicker">Services</p>
-          <h2>Streamline your sales process.</h2>
-          <div class="teaser-actions">
-            <a class="btn btn-dark btn-arrow" href="#book">
-              Get Started
-              <span class="arrow-circle" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
-              </span>
-            </a>
-            <a class="btn btn-secondary" href="#approach">See how it works</a>
-          </div>
-        </div>
-        <p class="teaser-desc">We manage the initial calling and qualifying phases, allowing your real estate agents to focus strictly on closing deals.</p>
-      </div>
-
-      <div class="teaser-mockup" data-reveal-scroll="right">
-        <div class="pipeline-card">
-          <div class="pipeline-card-head">
-            <span>Today's queue</span>
-            <span class="live-dot">Live</span>
-          </div>
-          <div class="pipeline-row">
-            <span class="pipeline-status">New lead</span>
-            <div class="pipeline-detail">
-              <div class="pipeline-name">Zillow inquiry — Cape Coral, FL</div>
-              <div class="pipeline-meta">Assigned just now</div>
-            </div>
-          </div>
-          <div class="pipeline-row">
-            <span class="pipeline-status">Qualifying</span>
-            <div class="pipeline-detail">
-              <div class="pipeline-name">Inbound call — 6 min 12 sec</div>
-              <div class="pipeline-meta">Budget and timeline confirmed</div>
-            </div>
-          </div>
-          <div class="pipeline-row">
-            <span class="pipeline-status">Follow-up set</span>
-            <div class="pipeline-detail">
-              <div class="pipeline-name">Callback — Thu 9:15 AM</div>
-              <div class="pipeline-meta">Waiting on pre-approval letter</div>
-            </div>
-          </div>
-          <div class="pipeline-row">
-            <span class="pipeline-status">Booked</span>
-            <div class="pipeline-detail">
-              <div class="pipeline-name">Showing confirmed — Sat 2:00 PM</div>
-              <div class="pipeline-meta">Handed to listing agent</div>
-            </div>
-          </div>
-        </div>
-        <p class="pipeline-caption">Illustrative example of an inside sales agent's queue.</p>
+    <div class="stage fade-in" style="animation-delay:.55s">
+      <div class="tcard glass" id="tcard">
+        <div class="t-top"><span class="t-live"><i></i>Incoming Live Transfer</span><span class="t-time" id="t-time">Now</span></div>
+        <div class="t-person"><span class="t-av">MR</span><div><b>Michael R. — Phoenix, AZ</b><small>Pre-qualified buyer · $650K–$850K range</small></div></div>
+        <p class="t-h">6-Point Qualification</p>
+        <ul class="crit" id="crit">
+          <li><span class="tick"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></span>Budget</li>
+          <li><span class="tick"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></span>Timeframe</li>
+          <li><span class="tick"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></span>Motivation</li>
+          <li><span class="tick"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></span>Financial Status</li>
+          <li><span class="tick"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></span>Search Criteria</li>
+          <li><span class="tick"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></span>Agent Status</li>
+        </ul>
+        <div class="t-foot" id="t-foot"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>All 6 confirmed — live on your phone</div>
       </div>
     </div>
-  </section>
+  </div>
+  <span class="scroll-cue" aria-hidden="true"></span>
+</section>
 
-  <!-- BENEFITS -->
-  <section class="section" id="benefits">
-    <div class="container">
-      <div class="section-head centered" data-reveal-scroll>
-        <p class="kicker">Benefits</p>
-        <h2 class="section-title">Focus on what you do best.</h2>
-        <p class="section-sub">We provide dedicated support to boost your real estate sales efficiency.</p>
-      </div>
+<div class="marquee" aria-hidden="true">
+  <div class="track" id="track"></div>
+</div>
 
-      <div class="benefit-card" data-reveal-scroll data-reveal-group="benefits">
-        <div class="benefit-thumb">
-          <img class="visual-photo" src="images/service-01-isa.jpg" alt="Sales agent on a call wearing a headset" />
-          <span class="plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
-        </div>
-        <h3>Dedicated Inside Sales (ISA)</h3>
-        <p>Get a fully managed sales professional who cold calls, follows up, and nurtures prospects so your team can focus exclusively on selling.</p>
+<!-- =====================  FIRM  ===================== -->
+<section id="firm">
+  <div class="container firm-grid">
+    <div>
+      <div class="rv">
+        <p class="badge">Our Firm</p>
+        <h2 class="title">What is <span class="gold">our firm?</span></h2>
+        <div class="rule" aria-hidden="true"><span></span><span></span></div>
       </div>
-
-      <div class="benefit-card" data-reveal-scroll data-reveal-group="benefits">
-        <div class="benefit-thumb">
-          <img class="visual-photo" src="images/benefit-lead-qualification.jpg" alt="Team of agents on headsets working at their desks" />
-          <span class="plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
-        </div>
-        <h3>Rigorous Lead Qualification</h3>
-        <p>We filter the noise out of your pipeline. Your agents only spend time talking to high-intent buyers and sellers who are ready to transact.</p>
-      </div>
-
-      <div class="benefit-card" data-reveal-scroll data-reveal-group="benefits">
-        <div class="benefit-thumb">
-          <img class="visual-photo" src="images/service-03-followup.jpg" alt="Businessperson marking follow-up dates on a calendar" />
-          <span class="plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
-        </div>
-        <h3>Relentless Follow-Up</h3>
-        <p>Most deals are lost in the follow-up. We execute consistent, long-term outreach campaigns so no opportunity ever falls through the cracks.</p>
-      </div>
+      <ul class="feats">
+        <li class="glass rv" style="--d:100ms"><h3>Your Ad Account</h3><p>Ads run from your account. You own all the data.</p></li>
+        <li class="glass rv" style="--d:200ms"><h3>Live Transfers Only</h3><p>No lead lists. No drip emails. Live people on your phone.</p></li>
+        <li class="glass rv" style="--d:300ms"><h3>Contractual Guarantee</h3><p>Every call recorded. Miss one criterion, you don't pay for the transfer.</p></li>
+      </ul>
     </div>
-  </section>
 
-  <!-- ABOUT OUR SERVICES (deep-dive, alternating) -->
-  <section class="section" id="approach">
-    <div class="container">
-      <div class="approach-head" data-reveal-scroll>
-        <div>
-          <p class="kicker">About our services</p>
-          <h2 class="section-title">Our Approach</h2>
+    <div class="rv" style="--d:150ms">
+      <div class="quote-card glass tilt">
+        <blockquote>"We do not sell leads. We build the machine, and <span class="gold">you own it.</span>"</blockquote>
+        <div class="body">
+          <p>We build buyer and seller acquisition systems that agents, teams, and brokerages own outright.</p>
+          <p>Ads run from your ad account. Every response hits our dialer. Our US team calls, qualifies, and transfers live to your phone.</p>
+          <p>Six points checked. Every call recorded. Miss one, you don't pay for the transfer.</p>
         </div>
-        <p class="section-sub">We handle the initial calling and qualifying, freeing up your agents to close more deals.</p>
-      </div>
-
-      <div class="deepdive-list">
-        <div class="deepdive-row">
-          <div class="deepdive-copy" data-reveal-scroll="left">
-            <p class="deepdive-eyebrow">Service 01</p>
-            <h3>A fully managed sales professional on every call.</h3>
-            <p>Your dedicated ISA cold calls, follows up, and nurtures prospects on your behalf — trained on your scripts and market, so your team can focus exclusively on selling.</p>
-            <a class="btn btn-dark btn-arrow" href="#book">
-              Get Started
-              <span class="arrow-circle" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
-            </a>
-          </div>
-          <div class="deepdive-visual" data-reveal-scroll="scale" aria-hidden="true">
-            <img class="visual-photo" src="images/deepdive-service-01.jpg" alt="" />
-            <span class="deepdive-num">01</span>
-          </div>
-        </div>
-
-        <div class="deepdive-row reverse">
-          <div class="deepdive-copy" data-reveal-scroll="right">
-            <p class="deepdive-eyebrow">Service 02</p>
-            <h3>Filter the noise out of your pipeline.</h3>
-            <p>We qualify every lead against your criteria before it reaches your calendar, so your agents only spend time with high-intent buyers and sellers who are ready to transact.</p>
-            <a class="btn btn-dark btn-arrow" href="#book">
-              Get Started
-              <span class="arrow-circle" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
-            </a>
-          </div>
-          <div class="deepdive-visual" data-reveal-scroll="scale" aria-hidden="true">
-            <img class="visual-photo" src="images/deepdive-service-02.jpg" alt="" />
-            <span class="deepdive-num">02</span>
-          </div>
-        </div>
-
-        <div class="deepdive-row">
-          <div class="deepdive-copy" data-reveal-scroll="left">
-            <p class="deepdive-eyebrow">Service 03</p>
-            <h3>Most deals are lost in the follow-up.</h3>
-            <p>We execute consistent, long-term outreach campaigns that keep leads warm between touches, so no opportunity ever falls through the cracks.</p>
-            <a class="btn btn-dark btn-arrow" href="#book">
-              Get Started
-              <span class="arrow-circle" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
-            </a>
-          </div>
-          <div class="deepdive-visual cadence-visual" data-reveal-scroll="scale" aria-hidden="true">
-            <div class="cadence-card cadence-card--chart-only">
-              <div class="cadence-chart" role="img" aria-label="Reply likelihood increases with each follow-up touch: touch one 18 percent, touch two 31 percent, touch three 52 percent, touch four or more 74 percent">
-                <div class="chart-head">
-                  <span class="chart-title">Reply likelihood by touch</span>
-                  <span class="chart-illustrative">Illustrative</span>
-                </div>
-                <div class="chart-bars">
-                  <div class="chart-col">
-                    <span class="chart-val">18%</span>
-                    <span class="chart-bar" style="--h:46px; --o:.28"></span>
-                    <span class="chart-label">Touch 1</span>
-                  </div>
-                  <div class="chart-col">
-                    <span class="chart-val">31%</span>
-                    <span class="chart-bar" style="--h:80px; --o:.48"></span>
-                    <span class="chart-label">Touch 2</span>
-                  </div>
-                  <div class="chart-col">
-                    <span class="chart-val">52%</span>
-                    <span class="chart-bar" style="--h:133px; --o:.7"></span>
-                    <span class="chart-label">Touch 3</span>
-                  </div>
-                  <div class="chart-col">
-                    <span class="chart-val is-peak">74%</span>
-                    <span class="chart-bar is-peak" style="--h:190px; --o:1"></span>
-                    <span class="chart-label">Touch 4+</span>
-                  </div>
-                </div>
-                <p class="chart-footnote">Reply odds climb with every touch — most bookings land after the third.</p>
-              </div>
-            </div>
-            <span class="deepdive-num">03</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SOLUTIONS -->
-  <section class="section" id="solutions">
-    <div class="container solutions-grid">
-      <div class="solutions-sticky" data-reveal-scroll>
-        <p class="kicker">Solutions</p>
-        <h2 class="section-title">Tailored to how your team sells</h2>
-        <p class="section-sub">We provide targeted solutions to enhance your real estate sales pipeline.</p>
-      </div>
-
-      <div class="solutions-cards">
-        <div class="solutions-card" data-reveal-scroll data-reveal-group="solutions">
-          <div class="solutions-card-visual" aria-hidden="true">
-            <img class="visual-photo" src="images/solutions-independent-agents.jpg" alt="" />
-          </div>
-          <h3>Independent Agents</h3>
-          <p>One dedicated ISA works your leads like an extension of you — same scripts, same standards, without adding headcount.</p>
-        </div>
-        <div class="solutions-card" data-reveal-scroll data-reveal-group="solutions">
-          <div class="solutions-card-visual" aria-hidden="true">
-            <img class="visual-photo" src="images/solutions-team-leads.jpg" alt="" />
-          </div>
-          <h3>Team Leads</h3>
-          <p>Leads get routed and qualified centrally, then handed to the right agent — with reporting your whole team can see.</p>
-        </div>
-        <div class="solutions-card" data-reveal-scroll data-reveal-group="solutions">
-          <div class="solutions-card-visual" aria-hidden="true">
-            <img class="visual-photo" src="images/solutions-brokerages.jpg" alt="" />
-          </div>
-          <h3>Brokerages</h3>
-          <p>A scalable outsourced sales floor that boosts productivity across every team under your brokerage.</p>
-        </div>
-        <div class="solutions-card" data-reveal-scroll data-reveal-group="solutions">
-          <div class="solutions-card-visual" aria-hidden="true">
-            <img class="visual-photo" src="images/solutions-growing-teams.jpg" alt="" />
-          </div>
-          <h3>Growing Teams</h3>
-          <p>Coverage scales with your call volume, so a slow month or a busy one doesn't mean re-hiring or re-training.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROCESS -->
-  <section class="section" id="process">
-    <div class="container">
-      <div class="section-head" data-reveal-scroll>
-        <p class="kicker">How it works</p>
-        <h2 class="section-title">From first call to your first report</h2>
-        <p class="section-sub">A straightforward onboarding, built around how your team already works.</p>
-      </div>
-
-      <div class="process-list">
-        <div class="process-step" data-reveal-scroll data-reveal-group="process">
-          <div class="process-num tabular">01</div>
-          <h3>Discovery call</h3>
-          <p>We learn your market, your current lead sources, and where calls are falling through today.</p>
-        </div>
-        <div class="process-step" data-reveal-scroll data-reveal-group="process">
-          <div class="process-num tabular">02</div>
-          <h3>Onboarding &amp; scripts</h3>
-          <p>We set up call scripts, CRM access, and a reporting cadence around your existing workflow.</p>
-        </div>
-        <div class="process-step" data-reveal-scroll data-reveal-group="process">
-          <div class="process-num tabular">03</div>
-          <h3>Agents start calling</h3>
-          <p>Your dedicated ISA begins working leads on the schedule you set.</p>
-        </div>
-        <div class="process-step" data-reveal-scroll data-reveal-group="process">
-          <div class="process-num tabular">04</div>
-          <h3>Weekly reporting</h3>
-          <p>You get a standing report on calls made, leads qualified, and appointments booked.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- DIFFERENTIATORS -->
-  <section class="section" id="differentiators">
-    <div class="container impact-grid">
-      <div class="impact-sticky" data-reveal-scroll>
-        <p class="kicker">The differentiators</p>
-        <h2>Not a generic call center.</h2>
-      </div>
-
-      <div class="impact-cards">
-        <div class="impact-card pop" data-reveal-scroll data-reveal-group="impact">
-          <div class="impact-value tabular" data-count-to="100" data-suffix="%">0%</div>
-          <p class="impact-label"><strong>Real Estate Exclusive.</strong> Our agents and infrastructure are built specifically for the real estate industry — not a generic call center.</p>
-        </div>
-        <div class="impact-card" data-reveal-scroll data-reveal-group="impact">
-          <div class="impact-value">US-Run</div>
-          <p class="impact-label"><strong>US-Run Operations.</strong> Strict quality control, accountability, and management based entirely in the United States.</p>
-        </div>
-        <div class="impact-card" data-reveal-scroll data-reveal-group="impact">
-          <div class="impact-value tabular" data-count-to="24" data-suffix="/7">0</div>
-          <p class="impact-label"><strong>Pipeline Coverage.</strong> Real estate doesn't stop at 5 PM. We engage your leads around the clock so you never miss an after-hours opportunity.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section class="section" id="about">
-    <div class="container about-grid">
-      <div data-reveal-scroll="left">
-        <p class="kicker">About us</p>
-        <h2 class="section-title">Focused on results, not just calls</h2>
-        <div class="about-copy" style="margin-top: 22px;">
-          <p>Rapid Reach LLC is a business process outsourcing company built specifically to support US real estate operations. We provide dedicated sales agents who are trained, managed, and ready to perform from day one.</p>
-          <p>Our team operates with the discipline of a high-performance sales floor — focused on conversion, accountability, and consistent communication with your team.</p>
-        </div>
-      </div>
-
-      <div class="about-note" data-reveal-scroll="right">
-        <h3>Who's behind it</h3>
-        <p>Rapid Reach is managed and operated from the United States, based in Utah. Every account is overseen directly by our team — no anonymous account managers, no black-box reporting.</p>
-        <p>Questions before booking a call? Reach out directly at <a class="accent-link" href="mailto:michaelt@rapidreachllc.biz">michaelt@rapidreachllc.biz</a>.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section class="section" id="faq">
-    <div class="container">
-      <div class="section-head" data-reveal-scroll>
-        <p class="kicker">Questions</p>
-        <h2 class="section-title">Before you book a call</h2>
-      </div>
-
-      <div class="faq-list">
-        <div class="faq-item" data-reveal-scroll data-reveal-group="faq">
-          <div class="faq-q">How fast can agents start calling my leads?</div>
-          <div class="faq-a">Most teams are live within one to two weeks of the discovery call, once scripts and CRM access are in place.</div>
-        </div>
-        <div class="faq-item" data-reveal-scroll data-reveal-group="faq">
-          <div class="faq-q">Where is Rapid Reach based?</div>
-          <div class="faq-a">Rapid Reach is managed and operated from the United States, with oversight and quality standards set from our team in Utah.</div>
-        </div>
-        <div class="faq-item" data-reveal-scroll data-reveal-group="faq">
-          <div class="faq-q">Will this work with our current CRM?</div>
-          <div class="faq-a">We work inside the tools your team already uses for lead routing and follow-up notes — tell us your setup on the discovery call and we'll confirm fit before you commit to anything.</div>
-        </div>
-        <div class="faq-item" data-reveal-scroll data-reveal-group="faq">
-          <div class="faq-q">What does it cost?</div>
-          <div class="faq-a">Pricing depends on call volume and coverage hours. We'll walk through options directly on your discovery call rather than quote blind.</div>
-        </div>
-        <div class="faq-item" data-reveal-scroll data-reveal-group="faq">
-          <div class="faq-q">How do you keep call quality consistent?</div>
-          <div class="faq-a">Every call is logged against the script and standards set during onboarding, with a weekly report back to your team so nothing is a surprise.</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FINAL CTA -->
-  <section class="section cta-band" id="book">
-    <div class="container cta-inner" data-reveal-scroll>
-      <h2>Scale with Rapid Reach.<br>Start today.</h2>
-      <div class="cta-actions">
-        <a class="btn btn-primary btn-arrow" href="mailto:michaelt@rapidreachllc.biz?subject=Discovery%20call%20request&body=Hi%20Michael%2C%0D%0A%0D%0AI'd%20like%20to%20schedule%20a%20discovery%20call.%20A%20good%20time%20for%20me%20is%3A%0D%0A%0D%0ATeam%2Fmarket%3A%0D%0A">
-          Get Started
-          <span class="arrow-circle" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
-        </a>
-        <a class="btn btn-dark" href="#process">Learn More</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section class="section" id="contact">
-    <div class="container contact-grid">
-      <div class="contact-info" data-reveal-scroll="left">
-        <p class="kicker">Contact</p>
-        <h2 class="section-title">Get in touch</h2>
-        <p class="section-sub">Have questions or ready to get started? We reply within one business day.</p>
-        <dl>
-          <dt>Email</dt>
-          <dd><a href="mailto:michaelt@rapidreachllc.biz">michaelt@rapidreachllc.biz</a></dd>
-          <dt>Location</dt>
-          <dd>Based in Utah, USA</dd>
+        <dl class="stat-row">
+          <div><dt class="sr-only">Qualification Points</dt><dd><b class="gold"><span data-count="6">0</span></b><small aria-hidden="true">Qualification Points</small></dd></div>
+          <div><dt class="sr-only">Data Ownership</dt><dd><b class="gold"><span data-count="100">0</span>%</b><small aria-hidden="true">Data Ownership</small></dd></div>
+          <div><dt class="sr-only">Lead Selling</dt><dd><b class="gold"><span data-count="0">0</span></b><small aria-hidden="true">Lead Selling</small></dd></div>
         </dl>
       </div>
-
-      <form class="contact-form" data-reveal-scroll="right" action="mailto:michaelt@rapidreachllc.biz" method="post" enctype="text/plain">
-        <div class="field">
-          <label for="name">Name</label>
-          <input id="name" name="Name" type="text" required autocomplete="name" />
-        </div>
-        <div class="field">
-          <label for="email">Email</label>
-          <input id="email" name="Email" type="email" required autocomplete="email" />
-        </div>
-        <div class="field">
-          <label for="message">What can we help with?</label>
-          <textarea id="message" name="Message" required></textarea>
-        </div>
-        <button class="btn btn-primary" type="submit">Send message</button>
-        <p class="form-note">Opens your email client with this message ready to send to michaelt@rapidreachllc.biz.</p>
-      </form>
     </div>
-  </section>
+  </div>
+</section>
+
+<!-- =====================  SYSTEM  ===================== -->
+<section id="system">
+  <div class="container">
+    <div class="head rv">
+      <p class="badge">The System</p>
+      <h2 class="title">The 3-Stage <span class="gold">Acquisition Engine</span></h2>
+      <p class="lead">Three stages. One system. Stronger every 90 days.</p>
+    </div>
+    <ol class="stage-grid">
+      <li class="stg glass tilt rv" style="--d:0ms">
+        <span class="wm" aria-hidden="true">01</span>
+        <p class="k">Stage 1</p><h3>Precision Marketing</h3><p class="sub">Get Buyers &amp; Sellers Responding</p>
+        <ul>
+          <li>Ads aimed at your price points and neighborhoods</li>
+          <li>Your ad account. You own 100% of the data</li>
+          <li>Targeted by zip code, behavior, and intent</li>
+        </ul>
+      </li>
+      <li class="stg glass tilt rv" style="--d:120ms">
+        <span class="wm" aria-hidden="true">02</span>
+        <p class="k">Stage 2</p><h3>The Human Element</h3><p class="sub">Tire Kickers Filtered Out</p>
+        <ul>
+          <li>No AI callers. No offshore scripts. US team only</li>
+          <li>New leads hit the dialer. Callback in minutes</li>
+          <li>Live interview covers all criteria</li>
+          <li>Every call recorded</li>
+        </ul>
+      </li>
+      <li class="stg glass tilt rv" style="--d:240ms">
+        <span class="wm" aria-hidden="true">03</span>
+        <p class="k">Stage 3</p><h3>The Scaling Engine</h3><p class="sub">Gets Stronger Every Month</p>
+        <ul>
+          <li>5–10 qualified transfers a month</li>
+          <li>Past prospects close while new ones come in</li>
+          <li>By month 6, your pipeline is full</li>
+          <li>You own the pipeline and the data</li>
+        </ul>
+      </li>
+    </ol>
+    <div class="stack rv" aria-label="Works with your CRM and tools">
+      <p class="stack-k">Plugs into your stack</p>
+      <ul class="stack-row">
+        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>GoHighLevel</li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>HubSpot</li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Custom CRMs</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- =====================  ROI CALCULATOR  ===================== -->
+<section id="roi">
+  <div class="container">
+    <div class="head rv">
+      <p class="badge">Pipeline Calculator</p>
+      <h2 class="title">What are live transfers <span class="gold">worth?</span></h2>
+      <p class="lead">Two inputs. See your pipeline.</p>
+    </div>
+    <div class="calc glass rv" id="calc">
+      <div class="calc-in">
+        <div class="cf">
+          <label for="c-comm">Average commission per deal</label>
+          <div class="money"><span aria-hidden="true">$</span><input id="c-comm" type="text" inputmode="numeric" value="10,000" autocomplete="off"></div>
+        </div>
+        <div class="cf">
+          <label for="c-xfer">Live transfers per month <output id="c-xfer-out" for="c-xfer">8</output></label>
+          <input id="c-xfer" type="range" min="5" max="15" step="1" value="8">
+          <div class="ticks" aria-hidden="true"><span>5</span><span>10</span><span>15</span></div>
+          <div class="quick" role="group" aria-label="Quick select transfers per month">
+            <button type="button" data-v="5">5</button><button type="button" data-v="8" class="on">8</button><button type="button" data-v="10">10</button><button type="button" data-v="15">15</button>
+          </div>
+        </div>
+      </div>
+      <div class="calc-out" aria-live="polite">
+        <div><small>Added monthly commission pipeline</small><b class="gold" id="c-month">$80,000</b></div>
+        <a href="#qualify" class="btn btn-gold magnetic">See If You Qualify <svg class="icon arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+      <p class="calc-note">Pipeline = potential gross commission if every transfer closes. Not a guarantee. Your close rate sets what you keep.</p>
+    </div>
+  </div>
+</section>
+
+<!-- =====================  GUARANTEE  ===================== -->
+<section id="guarantee">
+  <div class="container">
+    <div class="g-top">
+      <div class="rv">
+        <p class="badge">Risk Reversal</p>
+        <h2 class="title">The 6-Point<br><span class="gold">Contractual Guarantee</span></h2>
+        <p class="g-sub">Backed by full call-recording audits — if we miss a point, you don't pay for the transfer.</p>
+        <p class="lead" style="max-width:28rem">Every transfer passes all 6 criteria on a recorded call.</p>
+      </div>
+      <div class="rv" style="--d:150ms">
+        <div class="g-card glass tilt">
+          <h3>Zero-Risk Transfer Guarantee</h3>
+          <p>We review every recorded call. If a transfer misses any criterion, you don't pay for the transfer.</p>
+          <p class="gfoot"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg>Protected by our contractual guarantee</p>
+        </div>
+      </div>
+    </div>
+
+    <ul class="crit-grid">
+      <li class="cr glass rv" style="--d:0ms"><span class="n">01</span><h3>Budget Confirmed <svg aria-label="Verified" role="img"><use href="#i-verified"/></svg></h3><p>Can afford your target price range.</p></li>
+      <li class="cr glass rv" style="--d:100ms"><span class="n">02</span><h3>Timeframe Confirmed <svg aria-label="Verified" role="img"><use href="#i-verified"/></svg></h3><p>Ready to move within 90 days.</p></li>
+      <li class="cr glass rv" style="--d:200ms"><span class="n">03</span><h3>Motivation Confirmed <svg aria-label="Verified" role="img"><use href="#i-verified"/></svg></h3><p>A real reason to buy or sell now.</p></li>
+      <li class="cr glass rv" style="--d:0ms"><span class="n">04</span><h3>Financial Status Confirmed <svg aria-label="Verified" role="img"><use href="#i-verified"/></svg></h3><p>Pre-approval or proof of funds confirmed.</p></li>
+      <li class="cr glass rv" style="--d:100ms"><span class="n">05</span><h3>Search Criteria Confirmed <svg aria-label="Verified" role="img"><use href="#i-verified"/></svg></h3><p>Location, property type, and must-haves captured.</p></li>
+      <li class="cr glass rv" style="--d:200ms"><span class="n">06</span><h3>Free to Work With You <svg aria-label="Verified" role="img"><use href="#i-verified"/></svg></h3><p>No active contract with another agent.</p></li>
+    </ul>
+  </div>
+</section>
+
+<!-- =====================  ABOUT  ===================== -->
+<section id="about">
+  <div class="container about-grid">
+    <div class="rv">
+      <p class="badge"><i></i>About Us</p>
+      <h2 class="title">Focused on <span class="gold">results,</span> not just calls</h2>
+      <div class="rule" aria-hidden="true"><span></span><span></span></div>
+    </div>
+    <div>
+      <div class="about-copy rv" style="--d:100ms">
+        <p>Rapid Reach is an inside sales team built for US real estate. Trained callers, ready from day one.</p>
+        <p>A real sales floor: built for conversions, accountable on every call, in constant contact with you.</p>
+      </div>
+      <aside class="who glass rv" style="--d:200ms" aria-label="Who's behind Rapid Reach">
+        <p class="k">Who's behind it</p>
+        <p class="m">Run from Utah, USA. Every account is overseen by our team. No hidden reporting.</p>
+        <div class="ask">
+          Questions before booking a call? Reach out directly:
+          <br><a class="mail" href="mailto:michaelt@rapidreachllc.biz"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg><span>michaelt@rapidreachllc.biz</span></a>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- =====================  FAQ  ===================== -->
+<section id="faq">
+  <div class="container">
+    <div class="head rv" style="margin-bottom:0">
+      <p class="badge">Common Questions</p>
+      <h2 class="title">Frequently Asked <span class="gold">Questions</span></h2>
+      <p class="lead">Quick answers before your call.</p>
+    </div>
+
+    <div class="faq-tabs rv" role="tablist" aria-label="FAQ categories">
+      <button type="button" role="tab" id="ft-pricing" aria-selected="true" aria-controls="faq-list" data-cat="pricing">Pricing &amp; Guarantee</button>
+      <button type="button" role="tab" id="ft-process" aria-selected="false" aria-controls="faq-list" data-cat="process" tabindex="-1">The Process</button>
+      <button type="button" role="tab" id="ft-tech" aria-selected="false" aria-controls="faq-list" data-cat="tech" tabindex="-1">Tech &amp; Coverage</button>
+    </div>
+
+    <ul class="faq" id="faq-list" role="tabpanel" aria-labelledby="ft-pricing">
+      <li class="q glass rv" data-cat="process"><h3><button type="button" aria-expanded="false"><span class="num">01</span><span class="txt">Is this a lead generation company?</span><span class="pm" aria-hidden="true">+</span></button></h3><div class="ans"><div><p>No. We don't sell leads, and we never resell your contacts. We build and run a client acquisition system inside your own ad account, then deliver qualified buyers and sellers to you as live phone transfers.</p></div></div></li>
+      <li class="q glass rv" data-cat="process"><h3><button type="button" aria-expanded="false"><span class="num">02</span><span class="txt">How does the dialer work?</span><span class="pm" aria-hidden="true">+</span></button></h3><div class="ans"><div><p>The moment someone submits their information through your ad, it routes directly into our high-level dialer. Our in-house team calls them within minutes — while intent is at its highest — and runs the full 6-point qualification interview.</p></div></div></li>
+      <li class="q glass rv" data-cat="process"><h3><button type="button" aria-expanded="false"><span class="num">03</span><span class="txt">What does a "live transfer" actually mean?</span><span class="pm" aria-hidden="true">+</span></button></h3><div class="ans"><div><p>It means a real, pre-qualified buyer or seller is connected directly to your phone while they are still on the line with our agent. No callback lists, no cold numbers — a warm conversation handed straight to you.</p></div></div></li>
+      <li class="q glass rv" data-cat="pricing"><h3><button type="button" aria-expanded="false"><span class="num">04</span><span class="txt">What if a transfer isn't qualified?</span><span class="pm" aria-hidden="true">+</span></button></h3><div class="ans"><div><p>Every transfer is recorded and reviewed against all 6 criteria. If any single criterion is missed, you don't pay for that transfer — that is our contractual guarantee.</p></div></div></li>
+      <li class="q glass rv" data-cat="pricing"><h3><button type="button" aria-expanded="false"><span class="num">05</span><span class="txt">Do I own the ad account and the leads?</span><span class="pm" aria-hidden="true">+</span></button></h3><div class="ans"><div><p>Yes, 100%. Ads run strictly from your own ad account, so every contact, every data point, and every pixel of performance history belongs to you — even if we stop working together.</p></div></div></li>
+      <li class="q glass rv" data-cat="process"><h3><button type="button" aria-expanded="false"><span class="num">06</span><span class="txt">How many transfers can I expect each month?</span><span class="pm" aria-hidden="true">+</span></button></h3><div class="ans"><div><p>Most partners see 5–10 qualified live transfers per month once the system is running, with results compounding over each 90-day cycle as past prospects mature into closings.</p></div></div></li>
+      <li class="q glass rv" data-cat="tech"><h3><button type="button" aria-expanded="false"><span class="num">07</span><span class="txt">Do you work with teams and brokerages?</span><span class="pm" aria-hidden="true">+</span></button></h3><div class="ans"><div><p>Yes. We work with individual agents, teams, and brokerages. Transfers can be routed to a single agent or distributed across your team based on the rules you set during onboarding.</p></div></div></li>
+      <li class="q glass rv" data-cat="tech"><h3><button type="button" aria-expanded="false"><span class="num">08</span><span class="txt">Which markets do you currently serve?</span><span class="pm" aria-hidden="true">+</span></button></h3><div class="ans"><div><p>We actively run campaigns across US markets including Phoenix, Dallas, Atlanta, Denver, Las Vegas, and Salt Lake City. We partner with a limited number of agents per market, so availability depends on your area.</p></div></div></li>
+      <li class="q glass rv" data-cat="process"><h3><button type="button" aria-expanded="false"><span class="num">09</span><span class="txt">How fast can agents start calling my leads?</span><span class="pm" aria-hidden="true">+</span></button></h3><div class="ans"><div><p>Most teams are live within one to two weeks of the discovery call, once scripts and CRM access are in place.</p></div></div></li>
+      <li class="q glass rv" data-cat="tech"><h3><button type="button" aria-expanded="false"><span class="num">10</span><span class="txt">Where is Rapid Reach based?</span><span class="pm" aria-hidden="true">+</span></button></h3><div class="ans"><div><p>Rapid Reach is managed and operated from the United States, with oversight and quality standards set from our team in Utah.</p></div></div></li>
+      <li class="q glass rv" data-cat="tech"><h3><button type="button" aria-expanded="false"><span class="num">11</span><span class="txt">Will this work with our current CRM?</span><span class="pm" aria-hidden="true">+</span></button></h3><div class="ans"><div><p>We work inside the tools your team already uses for lead routing and follow-up notes — tell us your setup on the discovery call and we'll confirm fit before you commit to anything.</p></div></div></li>
+      <li class="q glass rv" data-cat="pricing"><h3><button type="button" aria-expanded="false"><span class="num">12</span><span class="txt">What does it cost?</span><span class="pm" aria-hidden="true">+</span></button></h3><div class="ans"><div><p>It depends on your market and how many transfers you want. A solo agent in one city doesn't need the same setup as a team covering five. Get on a quick call, we'll check your area and give you a straight number.</p></div></div></li>
+      <li class="q glass rv" data-cat="process"><h3><button type="button" aria-expanded="false"><span class="num">13</span><span class="txt">How do you keep call quality consistent?</span><span class="pm" aria-hidden="true">+</span></button></h3><div class="ans"><div><p>Every call is logged against the script and standards set during onboarding, with a weekly report back to your team so nothing is a surprise.</p></div></div></li>
+    </ul>
+
+    <div class="faq-more rv"><p>Still have questions?</p><a href="mailto:michaelt@rapidreachllc.biz" class="btn btn-glass btn-sm magnetic">Contact Our Team</a></div>
+  </div>
+</section>
+
+<!-- =====================  CTA  ===================== -->
+<section id="contact" style="padding-top:2rem">
+  <div class="container" style="max-width:56rem">
+    <div class="cta glass rv">
+      <span class="halo" aria-hidden="true"></span>
+      <p class="badge"><i></i>Limited Availability Per Market</p>
+      <h2 class="title">We partner with a <span class="gold">limited number</span> of agents per market.</h2>
+      <p class="lead">When a market fills, it closes. Yours may still be open. Book a 15-minute call to check.</p>
+      <ul class="trust"><li>15-min call</li><li>100% confidential</li></ul>
+      <div class="hero-cta">
+        <a href="#qualify" class="btn btn-gold btn-lg magnetic">See If You Qualify <svg class="icon arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a href="mailto:michaelt@rapidreachllc.biz" class="btn btn-glass btn-lg magnetic">Send a Message</a>
+      </div>
+    </div>
+  </div>
+</section>
 
 </main>
 
-<footer class="site-footer">
-  <div class="container">
-    <div class="footer-top">
-      <div class="footer-brand">
-        <h3>Rapid Reach</h3>
-        <a href="mailto:michaelt@rapidreachllc.biz">michaelt@rapidreachllc.biz</a>
-      </div>
-      <div class="footer-cols">
-        <div class="footer-col">
-          <h4>Menu</h4>
-          <a href="#services">Services</a>
-          <a href="#benefits">Benefits</a>
-          <a href="#solutions">Solutions</a>
-          <a href="#faq">FAQ</a>
-          <a href="#contact">Contact</a>
-        </div>
-        <div class="footer-col">
-          <h4>Legal</h4>
-          <a href="privacy.html">Privacy</a>
-          <a href="terms.html">Terms</a>
-        </div>
-      </div>
+<!-- =====================  FOOTER  ===================== -->
+<footer class="footer">
+  <div class="foot">
+    <div class="foot-row">
+      <a href="#top" class="brand" aria-label="Rapid Reach LLC home"><img src="images/logo-96.png" alt="" width="30" height="30"><b>Rapid Reach LLC</b></a>
+      <ul class="links"><li><a href="#system">Services</a></li><li><a href="#about">About</a></li><li><a href="#faq">FAQ</a></li><li><a href="mailto:michaelt@rapidreachllc.biz">Contact</a></li><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li></ul>
     </div>
-    <div class="footer-row">
-      <span class="footer-meta">© <span id="year"></span> Rapid Reach LLC. All rights reserved.</span>
-      <span class="footer-meta">Based in Utah, USA</span>
-    </div>
+    <address>
+      <a href="mailto:michaelt@rapidreachllc.biz">michaelt@rapidreachllc.biz</a>
+      <span>Based in Utah, USA</span>
+    </address>
+    <p class="scarcity"><i aria-hidden="true"></i>Exclusive markets fill fast. Once your area is taken, <b>it's gone.</b></p>
+    <small>© <span id="year">2026</span> Rapid Reach LLC. All rights reserved.</small>
   </div>
 </footer>
 
-<script src="script.js"></script>
+<div class="mbar" id="mbar"><a href="#qualify" class="btn btn-gold">Check Market Availability <svg class="icon arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+
+<a href="#top" class="totop glass" id="totop" aria-label="Back to top"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+
+<!-- =====================  QUALIFY MODAL  ===================== -->
+<div class="overlay" id="overlay" aria-hidden="true" inert>
+  <div class="modal glass" role="dialog" aria-modal="true" aria-labelledby="q-title">
+    <button type="button" class="x" id="q-close" aria-label="Close">×</button>
+
+    <div id="q-form-wrap">
+      <p class="eb">Limited Spots Available</p>
+      <h2 id="q-title">See if your market is open</h2>
+      <p class="sub">Takes 30 seconds. Tell us your city and we'll confirm if your market is open.</p>
+
+      <form id="q-form" novalidate>
+        <div class="hp" aria-hidden="true"><label>Company<input type="text" name="company" tabindex="-1" autocomplete="off"></label></div>
+        <div class="q-prog" aria-hidden="true"><span id="q-step-lbl">Step 1 of 2</span><i><b id="q-bar"></b></i></div>
+
+        <div class="q-steps">
+        <fieldset class="q-step" id="q-step1">
+          <legend class="q-q">Where do you work?</legend>
+          <div class="two">
+            <div class="mf"><input id="q-city" name="city" type="text" required maxlength="80" autocomplete="address-level2" placeholder=" "><label for="q-city">City *</label></div>
+            <div class="mf"><input id="q-state" name="state" type="text" required maxlength="40" autocomplete="address-level1" placeholder=" "><label for="q-state">State *</label></div>
+          </div>
+          <p class="q-q">How many leads do you work a month?</p>
+          <div class="chips" role="radiogroup" aria-label="Monthly lead volume">
+            <label><input type="radio" name="volume" value="1–10"><span>1–10</span></label>
+            <label><input type="radio" name="volume" value="11–25"><span>11–25</span></label>
+            <label><input type="radio" name="volume" value="26–50"><span>26–50</span></label>
+            <label><input type="radio" name="volume" value="51–100"><span>51–100</span></label>
+            <label><input type="radio" name="volume" value="100+"><span>100+</span></label>
+          </div>
+          <button type="button" class="btn btn-gold" id="q-next">Continue →</button>
+        </fieldset>
+
+        <fieldset class="q-step off" id="q-step2" inert aria-hidden="true">
+          <legend class="q-q">Where should we reach you?</legend>
+          <div class="mf"><input id="q-name" name="name" type="text" required maxlength="120" autocomplete="name" placeholder=" "><label for="q-name">Full Name *</label></div>
+          <div class="mf"><input id="q-phone" name="phone" type="tel" inputmode="tel" required minlength="7" maxlength="20" autocomplete="tel" placeholder=" "><label for="q-phone">Phone Number *</label></div>
+          <div class="mf"><input id="q-email" name="email" type="email" inputmode="email" required maxlength="160" autocomplete="email" autocapitalize="none" spellcheck="false" placeholder=" "><label for="q-email">Email *</label></div>
+          <label class="consent"><input type="checkbox" name="consent" required>I agree to be contacted by Rapid Reach LLC regarding real estate sales support services.</label>
+          <p class="err" id="q-err" role="alert" hidden></p>
+          <button type="submit" class="btn btn-gold" id="q-submit">Schedule My Qualification Call →</button>
+          <button type="button" class="q-back" id="q-back">← Back</button>
+        </fieldset>
+        </div>
+      </form>
+    </div>
+
+    <div class="ok-box" id="q-ok" hidden>
+      <div class="ok-ring"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></div>
+      <p class="eb">Request Received</p>
+      <h2>Thank you</h2>
+      <p>Our team will reach out shortly to schedule your 15-minute qualification call.</p>
+      <button type="button" class="btn btn-glass" id="q-done">Close</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
 </body>
 </html>
