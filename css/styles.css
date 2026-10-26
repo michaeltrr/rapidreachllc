@@ -507,3 +507,19 @@ main > section:not(.hero) { content-visibility: auto; contain-intrinsic-size: au
 .human-badge{display:inline-flex;align-items:center;gap:.5rem;margin-top:1.25rem;padding:.45rem .9rem;border:1px solid rgba(var(--gold-rgb),.35);border-radius:999px;background:rgba(var(--gold-rgb),.08);font-size:.8rem;font-weight:600;letter-spacing:.01em;color:var(--gold-bright)}
 .human-badge .icon{width:.95rem;height:.95rem;flex:none}
 @media (max-width:639px){.human-badge{font-size:.74rem;margin-top:1rem}}
+
+/* =========================================================
+   LEGAL PAGES (privacy.html, terms.html)
+   ========================================================= */
+.legal { padding: 7.5rem 0 4rem; }
+.legal-card { max-width: 46rem; margin-inline: auto; padding: 2rem 1.5rem 2.2rem; border-radius: 1.8rem; background: linear-gradient(145deg, rgb(24 20 15 / 0.62), rgb(14 12 9 / 0.52)); }
+.legal-card h1 { font-family: var(--font-serif); font-size: clamp(2rem, 5vw, 2.9rem); line-height: 1.1; letter-spacing: -0.02em; }
+.legal-card .updated { margin-top: 0.7rem; font-size: 0.82rem; color: var(--muted); }
+.legal-card h2 { margin-top: 2rem; font-family: var(--font-serif); font-size: 1.3rem; color: var(--gold-bright); }
+.legal-card p { margin-top: 0.7rem; color: #d2cbbf; line-height: 1.75; text-wrap: pretty; }
+.legal-card a { color: var(--gold-bright); text-decoration: underline; text-underline-offset: 3px; }
+.legal-card .fine-print { margin-top: 2.2rem; padding-top: 1.4rem; border-top: 1px solid rgb(255 255 255 / 0.1); font-size: 0.82rem; color: var(--muted); }
+.legal-foot { max-width: 46rem; margin: 1.6rem auto 0; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.6rem 1.5rem; font-size: 0.78rem; color: rgb(255 255 255 / 0.4); }
+.legal-foot a { color: var(--muted); transition: color 0.25s; }
+.legal-foot a:hover { color: var(--gold); }
+@media (min-width: 768px) { .legal { padding-top: 9rem; } .legal-card { padding: 3rem 3.2rem 3.2rem; } }
